@@ -28,7 +28,15 @@ var_dump($oppenheimer);
 </head>
 
 <body>
-
+    <section class="container">
+        <?php foreach ($movies as $movie) {
+            $p = new Movie($title['title'], $length['length'], $score['score'], $actors['actors']) ?>
+            <h1><?php $p->title ?></h1>
+            <p><?php $p->length ?></p>
+            <p><?php $p->score ?></p>
+            <div><?php $p->actors ?></div>
+        <?php } ?>
+    </section>
 </body>
 
 </html>
