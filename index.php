@@ -1,5 +1,22 @@
 <?php
-var_dump('prova');
+class Movie
+{
+    public $title;
+    public $length;
+    public $score;
+
+    function __construct($title, $length, $score)
+    {
+        $this->title = $title;
+        $this->length = $length;
+        $this->score = $score;
+    }
+}
+$flash = new Movie('The Flash', '2h 24m', '69%');
+$oppenheimer = new Movie('Oppenheimer', '3h 9m', '82%');
+
+var_dump($flash);
+var_dump($oppenheimer);
 ?>
 
 <!DOCTYPE html>
