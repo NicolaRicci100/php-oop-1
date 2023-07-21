@@ -5,12 +5,14 @@ class Movie
   public $title;
   public $length;
   public $score;
+  public $actors;
 
-  function __construct($title, $length, $score)
+  function __construct($title, $length, $score, $actors)
   {
     $this->title = $title;
     $this->length = $length;
     $this->score = $score;
+    $this->actors = $actors;
   }
   public function getApproval($score)
   {

@@ -1,8 +1,9 @@
 <?php
 include __DIR__ . '/models/movies.php';
+include __DIR__ . '/data/actors.php';
 
-$flash = new Movie('The Flash', '2h 24m', 69);
-$oppenheimer = new Movie('Oppenheimer', '3h 9m', 82);
+$flash = new Movie('The Flash', '2h 24m', 69, $actors['Fla']);
+$oppenheimer = new Movie('Oppenheimer', '3h 9m', 82, $actors['Opp']);
 
 
 $flash->getMovieCard();
