@@ -58,9 +58,7 @@ var_dump($oppenheimer);
 </head>
 
 <body>
-    <div id="root">
 
-    </div>
 </body>
 
 </html>
