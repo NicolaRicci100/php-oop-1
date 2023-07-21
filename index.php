@@ -5,7 +5,7 @@ include __DIR__ . '/data/actors.php';
 $flash = new Movie('The Flash', '2h 24m', 69, $actors['Fla']);
 $oppenheimer = new Movie('Oppenheimer', '3h 9m', 82, $actors['Opp']);
 
-
+$movies = [$flash, $oppenheimer];
 $flash->getMovieCard();
 $flash->getApproval(69);
 var_dump($flash);
