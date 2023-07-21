@@ -11,11 +11,29 @@ class Movie
         $this->length = $length;
         $this->score = $score;
     }
+    public function getApproval($score)
+    {
+        $approval = ' Accoglienza positiva';
+        if ($score < 70) {
+            $approval = ' Accoglienza negativa';
+        }
+        echo $approval;
+    }
+    public function getMovieCard()
+    {
+        echo 'Il film ' . $this->title . ' ha una durata di ' . $this->length . ' e il suo punteggio è di ' . $this->score . ' su 100';
+    }
 }
-$flash = new Movie('The Flash', '2h 24m', '69%');
-$oppenheimer = new Movie('Oppenheimer', '3h 9m', '82%');
+$flash = new Movie('The Flash', '2h 24m', 69);
+$oppenheimer = new Movie('Oppenheimer', '3h 9m', 82);
 
+
+$flash->getMovieCard();
+$flash->getApproval(69);
 var_dump($flash);
+
+$oppenheimer->getMovieCard();
+$oppenheimer->getApproval(82);
 var_dump($oppenheimer);
 ?>
 
