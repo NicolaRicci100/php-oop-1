@@ -1,6 +1,7 @@
 <?php
 include __DIR__ . '/models/movies.php';
 include __DIR__ . '/data/actors.php';
+include __DIR__ . '/models/actors.php';
 
 $flash = new Movie('The Flash', '2h 24m', 69, $actors['Fla']);
 $oppenheimer = new Movie('Oppenheimer', '3h 9m', 82, $actors['Opp']);
@@ -29,12 +30,11 @@ var_dump($oppenheimer);
 
 <body>
     <section class="container">
-        <?php foreach ($movies as $movie) {
-            $p = new Movie($title['title'], $length['length'], $score['score'], $actors['actors']) ?>
-            <h1><?php $p->title ?></h1>
-            <p><?php $p->length ?></p>
-            <p><?php $p->score ?></p>
-            <div><?php $p->actors ?></div>
+        <?php foreach ($movies as $movie) { ?>
+            <h1><?php $movie->title ?></h1>
+            <p><?php $movie->length ?></p>
+            <p><?php $movie->score ?></p>
+            <div><?php $movie->actors ?></div>
         <?php } ?>
     </section>
 </body>
