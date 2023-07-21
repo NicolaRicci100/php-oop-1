@@ -5,7 +5,7 @@ include __DIR__ . '/data/actors.php';
 $flash = new Movie('The Flash', '2h 24m', 69, $actors['Fla']);
 $oppenheimer = new Movie('Oppenheimer', '3h 9m', 82, $actors['Opp']);
 
-$movies = [$flash, $oppenheimer];
+// $movies = [$flash, $oppenheimer];
 $flash->getMovieCard();
 $flash->getApproval(69);
 var_dump($flash);
@@ -28,7 +28,7 @@ var_dump($oppenheimer);
 </head>
 
 <body>
-    <section class="container">
+    <!-- <section class="container">
         <?php foreach ($movies as $movie) {
             $p = new Movie($title['title'], $length['length'], $score['score'], $actors['actors']) ?>
             <h1><?php $p->title ?></h1>
@@ -36,7 +36,7 @@ var_dump($oppenheimer);
             <p><?php $p->score ?></p>
             <div><?php $p->actors ?></div>
         <?php } ?>
-    </section>
+    </section> -->
 </body>
 
 </html>
